@@ -13,11 +13,11 @@ paginate: true
 
 ## 📌 アジェンダ
 
-1. CI/CD とは？（3 分）
-2. CI/CD の仕組みと流れ（4 分）
-3. CI/CD のメリット（3 分）
-4. 【デモ】GitHub Actions で CI/CD（7 分）
-5. 質疑応答（3 分）
+1. [CI/CD とは？](#CI/CD-とは)（3 分）
+2. [CI/CD の仕組みと流れ](#CI/CD-の仕組みと流れ)（4 分）
+3. [CI/CD のメリット](#CI/CD-のメリット)（3 分）
+4. [【デモ】GitHub Actions で CI/CD](#デモ)（7 分）
+5. [質疑応答](#質疑応答)（3 分）
 
 ---
 
@@ -116,20 +116,39 @@ graph TD
 
 ---
 
-## 🎬 デモ (1/2)
+## 🎬 デモ (1/3)
 
 ### GitHub Actions による自動デプロイ
 
-1. サンプルアプリのコードを GitHub へコミット・プッシュ
-2. GitHub Actions が自動でビルドとテストを開始
-3. テストが成功したら自動で Heroku 等にデプロイ
-4. デプロイ完了後のアプリをブラウザで確認
+1. GitHub にて、リポジトリ作成
+1. ローカルにて、諸々準備
+1. cicd の設定ファイル
+   - .github/workflows/xxx.yml
+1. テスト対象のファイ
+   - app.js
+1. テストファイル
+   - tests.app.test.js
+1. ローカルから、 GitHub へコミット・プッシュ
+1. GitHub の Actions タブで、CICD が作動していることを確認
+1. GitHub の Actions タブで、CICD が成功したことを確認
 
 （デモ中、不明点あれば遠慮なく質問を！）
 
 ---
 
-## 🎬 デモ (1/2)
+## 🎬 デモ (2/3)
+
+### CICD 成功時のログ
+
+![image](./images/actions_success.png)
+
+### CICD 失敗時のログ
+
+![image](./images/actions_failed.png)
+
+---
+
+## 🎬 デモ (3/3)
 
 ### ワークフローの説明
 
@@ -191,6 +210,13 @@ graph TD
 ---
 
 ## 📚 補足資料（参考用）
+
+### 発表資料
+
+- [これまでの勉強会の資料](https://github.com/shota1998/presentation/tree/main)
+- [デモ](https://github.com/shota1998/2025-03-27_cicd/actions)
+
+### 参考文献
 
 - Martin Fowler『Continuous Integration』
 
